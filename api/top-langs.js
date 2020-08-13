@@ -54,7 +54,7 @@ module.exports = async (req, res) => {
       include: isInclude,
     });
   } catch (err) {
-    return res.send(renderError(err.message));
+    return res.send(renderError(err.message, err.secondaryMessage));
   }
 
   const cacheSeconds = clampValue(
