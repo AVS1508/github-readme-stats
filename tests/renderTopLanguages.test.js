@@ -28,7 +28,7 @@ describe("Test renderTopLanguages", () => {
     document.body.innerHTML = renderTopLanguages(langs);
 
     expect(queryByTestId(document.body, "header")).toHaveTextContent(
-      "Most Used Languages"
+      "My Top Used Languages"
     );
 
     expect(queryAllByTestId(document.body, "lang-name")[0]).toHaveTextContent(
@@ -189,7 +189,7 @@ describe("Test renderTopLanguages", () => {
     document.body.innerHTML = renderTopLanguages(langs, { layout: "compact" });
 
     expect(queryByTestId(document.body, "header")).toHaveTextContent(
-      "Most Used Languages"
+      "My Top Used Languages"
     );
 
     expect(queryAllByTestId(document.body, "lang-name")[0]).toHaveTextContent(

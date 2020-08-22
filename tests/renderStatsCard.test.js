@@ -24,7 +24,7 @@ describe("Test renderStatsCard", () => {
     document.body.innerHTML = renderStatsCard(stats);
 
     expect(document.getElementsByClassName("header")[0].textContent).toBe(
-      "Anurag Hazra's GitHub Stats"
+      "My GitHub Statistics"
     );
 
     expect(
@@ -43,13 +43,13 @@ describe("Test renderStatsCard", () => {
     document.body.innerHTML = renderStatsCard({ ...stats, name: "Anil Das" });
 
     expect(document.getElementsByClassName("header")[0].textContent).toBe(
-      "Anil Das' GitHub Stats"
+      "My GitHub Statistics"
     );
 
     document.body.innerHTML = renderStatsCard({ ...stats, name: "Felix" });
 
     expect(document.getElementsByClassName("header")[0].textContent).toBe(
-      "Felix' GitHub Stats"
+      "My GitHub Statistics"
     );
   });
 
