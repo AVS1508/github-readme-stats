@@ -49,19 +49,6 @@ async function fetchTopLanguages(username, langsCount = 5) {
 
   repoNodes = repoNodes
     .filter((node) => {
-      let new_edges = [];
-      //speed up check ignore languages
-      if (langs.names.length) {
-        for (edge of node.languages.edges) {
-          if (
-            langs.include ==
-            langs.names.includes(edge.node.name.trim().toLowerCase())
-          ) {
-            new_edges.push(edge);
-          }
-        }
-        node.languages.edges = new_edges;
-      }
       return node.languages.edges.length > 0;
     })
     // flatten the list of language nodes

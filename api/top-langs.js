@@ -21,39 +21,18 @@ module.exports = async (req, res) => {
     text_color,
     bg_color,
     theme,
-    include_lang = "",
-    exclude_lang = "",
     cache_seconds,
     layout,
     langs_count,
   } = req.query;
   let topLangs;
 
-  let includeLangs = include_lang == "" ? [] : include_lang.split(" ");
-  let excludeLangs = exclude_lang == "" ? [] : exclude_lang.split(" ");
-
-  if (includeLangs.length) {
-    includeLangs.forEach(function (lang, index, langs) {
-      langs[index] = lang
-        .toLowerCase()
-        .replace("plusplus", "++")
-        .replace("sharp", "#");
-    });
-  } else if (excludeLangs.length) {
-    excludeLangs.forEach(function (lang, index, langs) {
-      langs[index] = lang
-        .toLowerCase()
-        .replace("plusplus", "++")
-        .replace("sharp", "#");
-    });
-  }
   res.setHeader("Content-Type", "image/svg+xml");
 
   if (blacklist.includes(username)) {
     return res.send(renderError("Something went wrong"));
   }
 
-  let isInclude = includeLangs.length > excludeLangs.length;
   try {
     topLangs = await fetchTopLanguages(username, langs_count);
 
@@ -64,7 +43,7 @@ module.exports = async (req, res) => {
     );
 
     res.setHeader("Cache-Control", `public, max-age=${cacheSeconds}`);
-  
+
     return res.send(
       renderTopLanguages(topLangs, {
         hide_title: parseBoolean(hide_title),

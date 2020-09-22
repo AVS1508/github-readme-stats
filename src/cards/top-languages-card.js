@@ -173,7 +173,7 @@ const renderTopLanguages = (topLangs, options = {}) => {
   }
 
   const card = new Card({
-    title: "My Top Used Languages",
+    title: "Most Used Languages",
     width,
     height,
     colors: {
