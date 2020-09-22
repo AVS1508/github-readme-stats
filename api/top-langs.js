@@ -25,6 +25,7 @@ module.exports = async (req, res) => {
     exclude_lang = "",
     cache_seconds,
     layout,
+    langs_count,
   } = req.query;
   let topLangs;
 
@@ -54,10 +55,7 @@ module.exports = async (req, res) => {
 
   let isInclude = includeLangs.length > excludeLangs.length;
   try {
-    topLangs = await fetchTopLanguages(username, {
-      names: isInclude ? includeLangs : excludeLangs,
-      include: isInclude,
-    });
+    topLangs = await fetchTopLanguages(username, langs_count);
 
     const cacheSeconds = clampValue(
       parseInt(cache_seconds || CONSTANTS.TWO_HOURS, 10),
