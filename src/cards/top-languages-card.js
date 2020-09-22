@@ -32,7 +32,7 @@ const createCompactLangNode = ({ lang, totalSize, x, y }) => {
     <g transform="translate(${x}, ${y})">
       <circle cx="5" cy="6" r="5" fill="${color}" />
       <text data-testid="lang-name" x="15" y="10" class='lang-name'>
-        ${lang.name} (${percentage})%
+        ${lang.name} (${percentage}%)
       </text>
     </g>
   `;
