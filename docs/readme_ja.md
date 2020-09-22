@@ -34,7 +34,7 @@
     <a href="https://github.com/anuraghazra/github-readme-stats/issues/new/choose">Request Feature</a>
   </p>
   <p align="center">
-    <a href="/docs/readme_fr.md">Français </a>
+    <a href="/docs/readme_fr.md">Français</a>
     ·
     <a href="/docs/readme_cn.md">简体中文</a>
     ·
@@ -45,6 +45,8 @@
     <a href="/docs/readme_ja.md">日本語</a>
     ·
     <a href="/docs/readme_pt-BR.md">Português Brasileiro</a>
+    ·
+    <a href="/docs/readme_it.md">Italiano</a>
     ·
     <a href="/docs/readme_kr.md">한국어</a>
   </p>
@@ -131,7 +133,7 @@ dark, radical, merko, gruvbox, tokyonight, onedark, cobalt, synthwave, highcontr
 - `text_color` - 中身のテキストの色 _(16 進数カラーコード)_
 - `icon_color` - アイコンの色（変更可能な場合のみ） _(16 進数カラーコード)_
 - `bg_color` - 背景の色 _(16 進数カラーコード)_ **または** _angle,start,end_ の形式でグラデーションを指定することも可
-- `theme` - [使用可能なテーマ一覧](./themes/README.md) から選んだテーマ名
+- `theme` - [使用可能なテーマ一覧](../themes/README.md) から選んだテーマ名
 - `cache_seconds` - キャッシュ時間の秒数 _(最小値: 1800, 最大値: 86400)_
 
 ##### bg_color の グラデーション指定
@@ -139,7 +141,7 @@ dark, radical, merko, gruvbox, tokyonight, onedark, cobalt, synthwave, highcontr
 bg_color オプションで複数のカンマ区切りの値を指定してグラデーションをレンダリングすることができます。フォーマットは以下の通りになります。
 
 ```
-&bg_color=DEG,COLOR1,COLRO2,COLOR3...COLOR10
+&bg_color=DEG,COLOR1,COLOR2,COLOR3...COLOR10
 ```
 
 > キャッシュに関する注意点: Repo cards のデフォルトのキャッシュは、フォーク数とスター数が 1k 未満の場合は 30 分(1800 秒) で、それ以外の場合は 2 時間(7200) です。また、キャッシュは最低でも 30 分、最大でも 24 時間に制限されていることに注意してください。
@@ -285,10 +287,10 @@ _NOTE: Top languages は、ユーザのスキルレベルを示すものでは�
 
 ```md
 <a href="https://github.com/anuraghazra/github-readme-stats">
-  <img align="left" src="https://github-readme-stats.vercel.app/api/pin/?username=anuraghazra&repo=github-readme-stats" />
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=anuraghazra&repo=github-readme-stats" />
 </a>
 <a href="https://github.com/anuraghazra/convoychat">
-  <img align="left" src="https://github-readme-stats.vercel.app/api/pin/?username=anuraghazra&repo=convoychat" />
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=anuraghazra&repo=convoychat" />
 </a>
 ```
 
