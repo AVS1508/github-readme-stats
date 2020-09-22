@@ -53,14 +53,14 @@ const getStyles = ({
 }) => {
   return `
     .stat {
-      font: 600 14px 'Rubik', Ubuntu, "Helvetica Neue", Sans-Serif; fill: ${textColor};
+      font: 600 14px 'Inter', Ubuntu, "Helvetica Neue", Sans-Serif; fill: ${textColor};
     }
     .stagger {
       opacity: 0;
       animation: fadeInAnimation 0.3s ease-in-out forwards;
     }
     .rank-text {
-      font: 800 24px 'Rubik', Ubuntu, Sans-Serif; fill: ${textColor}; 
+      font: 800 24px 'Inter', Ubuntu, Sans-Serif; fill: ${textColor}; 
       animation: scaleInAnimation 0.3s ease-in-out forwards;
     }
     
