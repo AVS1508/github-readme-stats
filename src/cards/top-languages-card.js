@@ -85,7 +85,7 @@ const renderTopLanguages = (topLangs, options = {}) => {
     });
   }
 
-  // filter out langauges to be hidden
+  // filter out languages to be hidden
   langs = langs
     .sort((a, b) => b.size - a.size)
     .filter((lang) => {
@@ -173,7 +173,7 @@ const renderTopLanguages = (topLangs, options = {}) => {
   }
 
   const card = new Card({
-    title: "Most Used Languages",
+    title: "My Programming Languages",
     width,
     height,
     colors: {
@@ -187,7 +187,7 @@ const renderTopLanguages = (topLangs, options = {}) => {
   card.setHideBorder(hide_border);
   card.setHideTitle(hide_title);
   card.setCSS(`
-    .lang-name { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: ${textColor} }
+    .lang-name { font: 400 11px 'Roboto', Ubuntu, Sans-Serif; fill: ${textColor} }
   `);
 
   return card.render(`
