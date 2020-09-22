@@ -187,7 +187,7 @@ const renderTopLanguages = (topLangs, options = {}) => {
   card.setHideBorder(hide_border);
   card.setHideTitle(hide_title);
   card.setCSS(`
-    .lang-name { font: 400 11px 'Roboto', Ubuntu, Sans-Serif; fill: ${textColor} }
+    .lang-name { font: 400 11px 'Rubik', Ubuntu, Sans-Serif; fill: ${textColor} }
   `);
 
   return card.render(`
